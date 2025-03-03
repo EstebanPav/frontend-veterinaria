@@ -1,0 +1,98 @@
+/* 🏥 Contenedor principal con control de movimiento */
+.clinica-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Permite mover con top, left, right, bottom */
+    top: 0px; /* Cambia este valor para mover arriba/abajo */
+    left: -150px; /* Cambia este valor para mover izquierda/derecha */
+}
+
+/* 📌 Tarjeta de presentación */
+.clinica-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 169, 157, 0.5);
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🏥 Título con control de movimiento */
+.clinica-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+/* 🖼️ Imagen del logo */
+.clinica-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* 🏥 Nombre de la clínica */
+.clinica-card h1 {
+    font-size: 26px;
+    color: #119DA4;
+    margin-bottom: 10px;
+}
+
+/* 📍 Datos generales */
+.clinica-card p {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* ✨ Estilización del eslogan */
+.clinica-eslogan {
+    font-style: italic;
+    font-size: 20px;
+    color: #119DA4;
+    margin-top: 15px;
+}
+
+/* 🔹 Animación al pasar el mouse */
+.clinica-card:hover {
+    transform: scale(1.05);
+}
+
+/* 📱 Responsividad para móviles */
+@media (max-width: 768px) {
+    .clinica-container {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .clinica-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .clinica-card h1 {
+        font-size: 22px;
+    }
+
+    .clinica-card p {
+        font-size: 16px;
+    }
+
+    .clinica-eslogan {
+        font-size: 18px;
+    }
+}

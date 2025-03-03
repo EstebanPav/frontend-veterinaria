@@ -1,0 +1,252 @@
+/* 📌 Contenedor principal para integrar sidebar y navbar */
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start; /* Mantiene la parte superior alineada */
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding-left: 70px; /* Ajuste para alinear con la sidebar */
+    padding-top: 20px; /* Espacio para la navbar */
+}
+
+/* 📌 Contenedor de la tabla */
+.table-content {
+    max-width: 85%; /* Hace que la tabla no ocupe todo el ancho */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 📌 Título de la tabla */
+.table-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #212537;
+}
+
+/* 📌 Barra de búsqueda */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.search-icon {
+    color: #666;
+    margin-right: 5px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* 📌 Tabla */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.table-custom-header {
+    background: #212537;
+    color: white;
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* 📌 Filas de la tabla */
+tbody tr {
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 📌 Contenedor de Paginación */
+.pagination {
+    display: flex;
+    flex-direction: column; /* 🔹 Organiza los botones y números en columna */
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* 📌 Botones "Anterior" y "Siguiente" más largos */
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 🔹 Espacio entre botones */
+    width: 100%; /* 🔹 Asegura que ocupen todo el ancho disponible */
+}
+
+.pagination-btn {
+    background: #212537;
+    color: white;
+    border: none;
+    padding: 14px 40px; /* 🔹 Aumenta el tamaño del botón */
+    font-size: 16px; /* 🔹 Tamaño del texto más grande */
+    width: 180px; /* 🔹 Botón más largo */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.pagination-btn:hover {
+    background: #343a40;
+}
+
+.pagination-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* 📌 Contenedor de los números de página */
+.pagination-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px; /* 🔹 Espacio entre los botones y los números */
+}
+
+/* 📌 Estilos de los números de página */
+.pagination-number {
+    background: #ddd;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+/* 📌 Número activo de paginación */
+.pagination-number.active {
+    background: #212537;
+    color: white;
+}
+
+/* 📌 Botón "Ver Propietario" */
+.button-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.view-owner-btn {
+    background: #212537;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.view-owner-btn:hover {
+    background: #343a40;
+}
+
+/* 📌 Botones adicionales */
+.btn {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-info {
+    background: #007bff;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #0056b3;
+}
+
+/* 📌 Ajuste del contenido para mejor integración con sidebar */
+@media (max-width: 1200px) {
+    .table-content {
+        max-width: 95%;
+    }
+
+    .search-input-container {
+        width: 80%;
+    }
+
+    /* 🔹 Reducir tamaño de los botones en pantallas medianas */
+    .pagination-btn {
+        width: 150px;
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .table-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .search-input-container {
+        width: 90%;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* 🔹 Botones de paginación más pequeños en móviles */
+    .pagination-btn {
+        width: 120px;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,70 @@
+/* 🔹 Ajuste del botón "Salir" */
+.navbar .btn-danger {
+  background-color: #dc3545 !important; /* Color rojo de Bootstrap */
+  color: white !important; /* Asegura que el texto sea blanco */
+  padding: 8px 15px !important; /* Ajuste del tamaño */
+  border: none !important; /* Elimina cualquier borde */
+  border-radius: 5px !important; /* Bordes redondeados */
+  font-size: 1rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px; /* 🔹 Evita que el botón se achique demasiado */
+}
+
+/* 🔹 Estilo al pasar el mouse */
+.navbar .btn-danger:hover {
+  background-color: #c82333 !important; /* Rojo más oscuro */
+}
+
+/* 📌 Estilos de la Navbar */
+.navbar {
+  background-color: #119da4; /* Color principal */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* 🔹 Hace que la Navbar sea fija */
+  top: 0;
+  left: 0;
+  width: 100%; /* 🔹 Que ocupe todo el ancho */
+  z-index: 1000; /* 🔹 Se mantiene sobre otros elementos */
+  height: 60px; /* 🔹 Ajustar altura */
+  display: flex;
+  align-items: center;
+}
+
+/* 📌 Espaciado para que el contenido no quede detrás de la navbar */
+body {
+  padding-top: 60px; /* 🔹 Deja espacio para la navbar */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f8f8 !important;
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  border-color: #f8f8f8;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* 📌 Estilos para pantallas más pequeñas */
+@media (max-width: 992px) {
+  .navbar-nav {
+      text-align: center;
+  }
+}

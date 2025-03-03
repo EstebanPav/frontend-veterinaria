@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.form-container {
+    flex-grow: 1; /* Permite que el formulario crezca y use el espacio disponible */
+    max-width: 75%; /* Aumenta el ancho del formulario */
+    margin: 20px auto; /* Centra el formulario */
+    padding: 30px; /* Aumenta el padding para mejor distribución */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-title {
+    text-align: center; /* Centra el título */
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Resalta el título */
+    margin-bottom: 20px; /* Agrega espacio antes del formulario */
+    color: #333; /* Color oscuro para mejor visibilidad */
+}
+
+
+/* Ajustamos los inputs y selects para que ocupen más espacio */
+input, select, textarea {
+    width: 100%;
+    padding: 12px; /* Aumenta el tamaño del padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px; /* Hace el texto más legible */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px; /* Aumenta el tamaño de los textareas */
+}
+
+fieldset {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9; /* Mejora la visualización de secciones */
+}
+
+
+fieldset legend {
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Mantiene el texto en negrita */
+    color: #333; /* Un color oscuro para mejor visibilidad */
+    text-transform: uppercase; /* Mantiene las letras en mayúscula */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+
+/* Botón más grande y llamativo */
+button {
+    background-color: #119da4;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0e7b7e;
+}

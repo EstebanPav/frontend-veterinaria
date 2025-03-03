@@ -1,0 +1,68 @@
+/* 📌 Sidebar */
+.sidebar {
+  width: 250px;
+  height: calc(100vh - 50px); /* 🔹 Ajusta la altura dejando espacio */
+  background: #212537;
+  color: white;
+  padding-top: 40px; /* 🔹 Ajuste para que no esté tan pegada arriba */
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50px; /* 🔹 La subimos ligeramente */
+  left: 0;
+  overflow-y: auto;
+  border-top: 2px solid #181c2f; /* 🔹 Línea superior para separarla */
+}
+
+/* 📌 Lista de navegación */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px; /* 🔹 Ajuste para que los ítems no estén pegados arriba */
+}
+
+/* 📌 Elementos de la lista */
+.sidebar li {
+  padding: 12px 15px;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 📌 Ajuste del contenido principal */
+.content {
+  margin-left: 270px; /* 🔹 Espacio para evitar solapamiento */
+  padding: 20px;
+}
+
+/* 📌 Responsividad para pantallas pequeñas */
+@media (max-width: 992px) {
+  .sidebar {
+      width: 220px; /* 🔹 Reduce el ancho */
+      top: 50px; /* 🔹 Ajuste ligero */
+      height: calc(100vh - 50px);
+  }
+
+  .content {
+      margin-left: 230px; /* 🔹 Ajuste para evitar que el contenido se solape */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+      height: calc(100vh - 50px);
+      top: 50px; /* 🔹 Mantiene el mismo espacio arriba */
+  }
+
+  .content {
+      margin-left: 210px;
+  }
+}

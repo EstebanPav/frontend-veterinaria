@@ -1,0 +1,222 @@
+/* 📌 Contenedor principal */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding-left: 270px; /* 🔹 Ajuste para que no se solape con la sidebar */
+    padding-top: 80px; /* 🔹 Espacio para la navbar */
+}
+
+/* 📌 Contenedor del historial clínico */
+.historia-container {
+    width: 100%;
+    max-width: 1200px; /* 🔹 Espacio suficiente para la tabla */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* 📌 Título */
+.historia-container h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #212537;
+}
+
+/* 📌 Selector de mascotas */
+.historia-container select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* 📌 Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* 📌 Contenedor de la tabla con scroll horizontal */
+.tabla-container {
+    width: 100%;
+    overflow-x: auto; /* 🔹 Activa el scroll horizontal */
+    white-space: nowrap; /* 🔹 Mantiene el contenido en una sola línea */
+    padding-bottom: 10px;
+}
+
+/* 📌 Estilos de la tabla */
+.historia-table {
+    width: max-content; /* 🔹 Ajuste para que la tabla solo ocupe lo necesario */
+    border-collapse: collapse;
+    background: white;
+}
+
+/* 📌 Encabezados de la tabla */
+.historia-table th {
+    background: #212537;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* 📌 Celdas de la tabla */
+.historia-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: visible; /* ✅ Permite mostrar los botones correctamente */
+    text-overflow: ellipsis;
+}
+
+/* 📌 Resaltar fila al pasar el cursor */
+.historia-table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 📌 Botones de acciones */
+.btn-warning, .btn-danger {
+    padding: 8px 8px; /* 🔹 Botones más grandes */
+    font-size: 8px; /* 🔹 Aumenta el tamaño del texto */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+    color: white;
+}
+
+/* 📌 Botón Volver */
+.btn-volver {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: #0056b3;
+}
+
+
+/* 📌 Botón de Editar */
+.btn-warning {
+    background: #ffc107;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+/* 📌 Botón de Eliminar */
+.btn-danger {
+    background: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* 📌 Ajuste de tamaño de la celda de acciones */
+.historia-table td:first-child {
+    width: 160px; /* 🔹 Asegura que los botones tengan espacio */
+    min-width: 160px;
+}
+
+/* 📌 Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pagination button {
+    background: #212537;
+    color: white;
+    border: none;
+    padding: 10px 14px; /* 🔹 Tamaño más grande */
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px; /* 🔹 Tamaño más grande */
+}
+
+.pagination button:hover {
+    background: #343a40;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* 📌 Ajuste responsivo */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        padding-left: 220px; /* 🔹 Ajuste extra en pantallas medianas */
+    }
+
+    .historia-container {
+        max-width: 1000px; /* 🔹 Ajuste de ancho */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        padding-top: 100px;
+    }
+
+    .historia-container {
+        width: 90%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .historia-table th, .historia-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn-warning, .btn-danger {
+        font-size: 14px; /* 🔹 Ajuste para pantallas pequeñas */
+        padding: 8px 10px;
+    }
+
+    .pagination button {
+        font-size: 14px; /* 🔹 Ajuste en botones de paginación */
+        padding: 8px 12px;
+    }
+}

@@ -1,0 +1,18 @@
+.historias-table {
+    width: 100%;
+    min-width: 1200px; /* Asegura que la tabla no se comprima demasiado */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+}
+
+.table th {
+    white-space: nowrap; /* Evita que los títulos de columna se dividan */
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}

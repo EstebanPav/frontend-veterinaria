@@ -1,0 +1,63 @@
+/* 📌 Contenedor de paginación */
+.pagination {
+    display: flex;
+    flex-direction: column; /* 🔹 Organiza los botones y números de página en columna */
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* 📌 Botones "Anterior" y "Siguiente" más grandes */
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 🔹 Espacio entre botones */
+    width: 100%;
+}
+
+.pagination-btn {
+    background: #212537;
+    color: white;
+    border: none;
+    padding: 14px 40px; /* 🔹 Botón más grande */
+    font-size: 16px;
+    width: 180px; /* 🔹 Ajuste del ancho del botón */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.pagination-btn:hover {
+    background: #343a40;
+}
+
+.pagination-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* 📌 Contenedor de los números de página */
+.pagination-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px; /* 🔹 Espacio entre los botones y los números */
+}
+
+/* 📌 Estilos de los números de página */
+.pagination-number {
+    background: #ddd;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+/* 📌 Número activo de paginación */
+.pagination-number.active {
+    background: #212537;
+    color: white;
+}

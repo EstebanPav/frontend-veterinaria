@@ -1,0 +1,103 @@
+/* 📌 Contenedor principal */
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* Centra el formulario */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding-left: 70px; /* Ajuste para alinearlo con la sidebar */
+    padding-top: 60px; /* Espacio para la navbar */
+}
+
+
+
+/* 📌 Card del formulario */
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Títulos */
+.form-label {
+    font-weight: bold;
+    color: #212537;
+    font-size: 14px;
+}
+
+/* 📌 Inputs */
+.form-control {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* 📌 Selects */
+select.form-control {
+    appearance: none;
+    background: white;
+}
+
+/* 📌 Botón de enviar */
+.btn-primary {
+    background: #212537;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #343a40;
+}
+
+/* 📌 Toast Notifications */
+.Toastify__toast-container {
+    width: 300px;
+}
+
+.Toastify__toast {
+    font-size: 14px;
+}
+
+/* 📌 Responsivo para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        padding-left: 60px;
+    }
+
+    .container {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

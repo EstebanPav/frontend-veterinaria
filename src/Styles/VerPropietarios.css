@@ -1,0 +1,159 @@
+/* 📌 Contenedor principal */
+.propietario-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding-left: 260px; /* Ajuste para la sidebar */
+    padding-top: 50px; /* 🔹 Se redujo el espacio superior */
+}
+
+/* 📌 Contenido Principal */
+.ver-propietario-content {
+    width: 100%;
+    max-width: 1300px; /* 🔹 Ajusta el ancho de la tabla (puedes modificar este valor) */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: -30px; /* 🔹 Se movió más arriba la tabla */
+}
+
+/* 📌 Título */
+.ver-propietario-content h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #212537;
+    margin-bottom: 10px;
+}
+
+/* 📌 Botón de retroceso */
+.back-button {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 10px; /* 🔹 Se redujo el margen inferior */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* 📌 Selector de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* 🔹 Se redujo para compactar la vista */
+    width: 100%;
+}
+
+.search-icon {
+    color: #666;
+    margin-right: 5px;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* 📌 Contenedor de la tabla */
+.tabla-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* 📌 Tabla de propietarios */
+.propietario-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.propietario-table th {
+    background: #212537;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.propietario-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.propietario-table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 📌 Botón de acciones */
+.btn-warning {
+    background: #ffc107;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+/* 📌 Ajuste responsivo */
+@media (max-width: 1200px) {
+    .propietario-container {
+        padding-left: 220px;
+    }
+
+    .ver-propietario-content {
+        max-width: 700px; /* 🔹 Puedes ajustar el ancho aquí */
+    }
+}
+
+@media (max-width: 768px) {
+    .propietario-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        padding-top: 50px; /* 🔹 Se redujo más en móviles */
+    }
+
+    .ver-propietario-content {
+        width: 90%;
+        max-width: 100%;
+        padding: 15px;
+        margin-top: 0px; /* 🔹 Evita que la tabla baje demasiado */
+    }
+
+    .propietario-table th, .propietario-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn-warning {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}

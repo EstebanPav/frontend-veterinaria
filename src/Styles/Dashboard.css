@@ -1,0 +1,51 @@
+/* 📌 Contenedor principal */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+/* 📌 Estilo para el título principal */
+.dashboard-title {
+    position: relative; /* Permite mover con top, left, right, bottom */
+    top: 0px; /* Modifica este valor para mover arriba/abajo */
+    left: -150px; /* Modifica este valor para mover izquierda/derecha */
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Asegura que el título se mantenga centrado */
+    transition: all 0.3s ease-in-out; /* Suaviza los movimientos */
+}
+
+
+/* 📌 Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #212537;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* 🔹 Se ajusta debajo de la navbar */
+    left: 0;
+    overflow-y: auto;
+}
+
+/* 📌 Contenido Principal */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 260px; /* 🔹 Se ajusta según el tamaño del sidebar */
+    margin-top: 20px; /* 🔹 Evita que quede oculto por la navbar */
+    width: calc(100% - 260px); /* 🔹 Ajusta el ancho */
+}
+
+/* 📌 Ajuste responsivo */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 60px; /* 🔹 Sidebar más pequeña en pantallas chicas */
+    }
+
+    .content {
+        margin-left: 70px; /* 🔹 Ajustar margen para sidebar reducido */
+    }
+}

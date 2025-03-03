@@ -1,0 +1,108 @@
+/* 📌 Contenedor principal */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* 📌 Sidebar */
+.sidebar {
+    width: 250px;
+    background: #212537;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 📌 Contenedor del formulario */
+.registro-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* 📌 Tarjeta del formulario */
+.registro-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* 📌 Estilo para el título */
+.registro-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 📌 Filas responsivas */
+.registro-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 📌 Estilo para inputs y selects */
+.registro-form input,
+.registro-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 📌 Distribución en dos columnas */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+/* 📌 Ajuste de columnas */
+.col-md-6 {
+    flex: 1;
+}
+
+/* 📌 Botón de enviar */
+.registro-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.registro-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 📌 Responsivo */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .registro-container {
+        padding: 20px;
+    }
+    .row {
+        flex-direction: column;
+    }
+}

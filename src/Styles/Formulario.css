@@ -1,0 +1,126 @@
+/* FormularioHistorias.css */
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.historias-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.historias-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+.historias-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #119da4;
+}
+
+.historias-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.historias-form input,
+.historias-form select,
+.historias-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.historias-form input:focus,
+.historias-form select:focus,
+.historias-form textarea:focus {
+  border-color: #119da4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(17, 157, 164, 0.5);
+}
+
+.historias-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.historias-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.historias-form .row > div {
+  flex: 1;
+}
+
+.historias-form button {
+  width: 100%;
+  background-color: #119da4;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.historias-form button:hover {
+  background-color: #0a7c7e;
+}
+
+.historias-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.historias-form .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .historias-form {
+      padding: 20px;
+  }
+
+  .historias-form .row {
+      flex-direction: column;
+  }
+
+  .historias-form .row > div {
+      flex: 1 1 100%;
+  }
+
+  .historias-form button {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+  
+}

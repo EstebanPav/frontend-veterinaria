@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+.historias-form-container {
+    flex-grow: 1; /* Permite que el formulario crezca y use el espacio disponible */
+    max-width: 75%; /* Aumenta el ancho del formulario */
+    margin: 20px auto; /* Centra el formulario */
+    padding: 30px; /* Aumenta el padding para mejor distribución */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título centrado */
+.historias-form-title {
+    text-align: center; 
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+    color: #333;
+}
+
+/* Ajustamos los inputs y selects para que ocupen más espacio */
+.historias-form input, 
+.historias-form select, 
+.historias-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+/* Distribuir los campos en dos columnas en pantallas grandes */
+@media (min-width: 768px) {
+    .historias-form .row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .historias-form .row div {
+        flex: 1;
+    }
+}
+
+/* Ajustar el tamaño de los textarea */
+.historias-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Mejor espaciado entre las áreas de texto */
+.historias-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Botón más grande y llamativo */
+.historias-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Estilos específicos para los botones */
+.historias-form button[type="submit"] {
+    background: #008080;
+    color: white;
+}
+
+.historias-form button[type="button"] {
+    background: #e74c3c;
+    color: white;
+}
+
+.historias-form button:hover {
+    opacity: 0.8;
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Hacer que el formulario se vea bien en dispositivos móviles */
+@media (max-width: 768px) {
+    .historias-form-container {
+        width: 95%;
+    }
+}
